@@ -1,0 +1,21 @@
+{
+  "name": "react-useintersection",
+  "version": "0.0.0",
+  "description": "Custom React Hook for initializing IntersectionObserver on any node ref",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.allgood.mx/jump_spider/react-useintersection"
+  },
+  "keywords": [
+    "React",
+    "React",
+    "Hook",
+    "IntersectionObserver"
+  ],
+  "author": "Serra C Allgood",
+  "license": "SEE LICENSE IN LICENSE"
+}
