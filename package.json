@@ -4,7 +4,8 @@
   "description": "Custom React Hook for initializing IntersectionObserver on any node ref",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "node_modules/.bin/standard --fix --verbose **/*.ts | node_modules/.bin/faucet",
+    "test": "npm run lint && node test/index.js | node_modules/.bin/faucet"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,29 @@
     "IntersectionObserver"
   ],
   "author": "Serra C Allgood",
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "standard": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "extend-tape": "^1.2.0",
+    "faucet": "0.0.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-jsdom": "^3.0.0",
+    "react-test-renderer": "^16.11.0",
+    "standardjs": "^1.0.0-alpha",
+    "tape": "^4.11.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {}
 }
