@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "node_modules/.bin/standard --fix --verbose **/*.ts | node_modules/.bin/faucet",
-    "test": "npm run lint && node test/index.js | node_modules/.bin/faucet"
+    "test": "npm run lint && jest test/"
   },
   "repository": {
     "type": "git",
@@ -30,16 +30,15 @@
   },
   "devDependencies": {
     "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
-    "extend-tape": "^1.2.0",
-    "faucet": "0.0.1",
+    "enzyme": "^3.10.0",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-jsdom": "^3.0.0",
-    "react-test-renderer": "^16.11.0",
     "standardjs": "^1.0.0-alpha",
-    "tape": "^4.11.0",
     "typescript": "^3.6.4"
   },
   "dependencies": {}
