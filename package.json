@@ -4,8 +4,9 @@
   "description": "Custom React Hook for initializing IntersectionObserver on any node ref",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "lint": "node_modules/.bin/standard --fix --verbose **/*.ts | node_modules/.bin/faucet",
-    "test": "npm run lint && jest test/"
+    "test": "npm run lint && tsc --rootDir=./test outDir=./test_lib && jest test_lib"
   },
   "repository": {
     "type": "git",
