@@ -6,7 +6,7 @@ type UseIntersectionArgs = {
   threshold: number
 }
 
-export const useIntersection = (
+const useIntersection = (
   { root = null, rootMargin, threshold = 0 }: UseIntersectionArgs
 ): Array<{} | IntersectionObserverEntry | React.Dispatch<React.SetStateAction<any>>> => {
   const [entry, setEntry]: [
@@ -36,3 +36,5 @@ export const useIntersection = (
 
   return [setNode, entry]
 }
+
+export default useIntersection
