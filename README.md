@@ -4,7 +4,7 @@
 
 **react-useintersection** is a custom React Hook that allows for initializing [IntersectionObserver](mdn) on any node ref. With the `IntersectionanchorObserver` returned from the hook, components can be styled on the fly or related JavaScript behavior can be triggered.
 
-Be aware of the [browser compatiblity](https://caniuse.com/#feat=intersectionobserver) of `IntersectionObserver`, namely that IE11 does not support it. This package does include a polyfill for `IntersectionObserver` from the `intersection-observer` package.
+Be aware of the [browser compatiblity](https://caniuse.com/#feat=intersectionobserver) of `IntersectionObserver`, namely that IE11 does not support it. If necessary, consider using the `intersection-observer` package for a polyfill.
 
 ## Installation
 

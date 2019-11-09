@@ -7,10 +7,6 @@ const useIntersection = (options: Types.HookUseIntersectionArgs = {}): Types.Hoo
   const [node, setNode]: [null | Element, React.Dispatch<React.SetStateAction<any>>] = useState(null)
   const observer: React.MutableRefObject<null | IntersectionObserver> = useRef(null)
 
-  if (window && !('IntersectionObserver' in window)) {
-    require('intersection-observer')
-  }
-
   useEffect(() => {
     if (observer.current) observer.current.disconnect()
 
