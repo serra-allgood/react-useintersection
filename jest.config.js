@@ -35,5 +35,9 @@ module.exports = {
   testLocationInResults: true,
 
   // This option sets the URL for the jsdom environment. It is reflected in properties such as location.href
-  testURL: "http://localhost:101010"
+  testURL: "http://localhost:101010",
+
+  // Setup Enzyme
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "setupFilesAfterEnv": ["./src/setupEnzyme.ts"]
 };
