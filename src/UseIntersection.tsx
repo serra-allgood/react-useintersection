@@ -1,19 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-type UseIntersectionArgs = {
-  root: null | Element,
-  rootMargin: string,
-  threshold: number
-}
-
-type UseIntersectionReturn = [
-  React.Dispatch<React.SetStateAction<any>>,
-  IntersectionObserverEntry | {} | null
-]
+import * as Types from './types'
 
 const useIntersection = (
-  { root = null, rootMargin, threshold = 0 }: UseIntersectionArgs
-): UseIntersectionReturn => {
+  { root = null, rootMargin, threshold = 0 }: Types.UseIntersectionArgs
+): Types.UseIntersectionReturn => {
   const [entry, setEntry]: [
     {} | IntersectionObserverEntry,
     React.Dispatch<React.SetStateAction<any>>
