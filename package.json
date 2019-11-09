@@ -5,9 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "standardx --fix **/*.tsx && standardx --fix **/*.ts",
-    "build": "npm run lint && tsc",
-    "test": "jest",
-    "prepublishOnly": "npm run build"
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
