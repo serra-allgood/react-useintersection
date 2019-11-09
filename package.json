@@ -4,13 +4,13 @@
   "description": "Custom React Hook for initializing IntersectionObserver on any node ref",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "lint": "node_modules/.bin/standard --fix --verbose **/*.ts | node_modules/.bin/faucet",
-    "test": "npm run lint && tsc --rootDir=./test outDir=./test_lib && jest test_lib"
+    "build": "npm run lint && tsc",
+    "test": "npm run build && jest"
   },
   "repository": {
     "type": "git",
-    "url": "https://git.allgood.mx/jump_spider/react-useintersection"
+    "url": "https://git.allgood.dev/jump_spider/react-useintersection"
   },
   "keywords": [
     "React",
@@ -30,16 +30,20 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.22",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
     "@typescript-eslint/eslint-plugin": "^2.6.0",
     "@typescript-eslint/parser": "^2.6.0",
     "enzyme": "^3.10.0",
     "eslint": "^6.6.0",
+    "faucet": "0.0.1",
     "jest": "^24.9.0",
+    "jest-environment-jsdom": "^24.9.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "standardjs": "^1.0.0-alpha",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.6.4"
   },
   "dependencies": {}
