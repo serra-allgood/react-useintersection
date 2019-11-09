@@ -2,6 +2,12 @@
 
 ## 1.0.0
 
+- Create base implementation
+
+### Specs
+
+- Create basic spec for entry passing
+
 ### Boilerplate
 
 - Add license information for the CSL
