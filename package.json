@@ -2,12 +2,12 @@
   "name": "react-useintersection",
   "version": "1.0.0",
   "description": "Custom React Hook for initializing IntersectionObserver on any node ref",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "standardx --fix **/*.tsx && standardx --fix **/*.ts",
     "build": "npm run lint && tsc",
     "test": "jest",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
