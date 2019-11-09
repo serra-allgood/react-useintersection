@@ -6,9 +6,14 @@ type UseIntersectionArgs = {
   threshold: number
 }
 
+type UseIntersectionReturn = [
+  React.Dispatch<React.SetStateAction<any>>,
+  IntersectionObserverEntry | {} | null
+]
+
 const useIntersection = (
   { root = null, rootMargin, threshold = 0 }: UseIntersectionArgs
-): Array<{} | IntersectionObserverEntry | React.Dispatch<React.SetStateAction<any>>> => {
+): UseIntersectionReturn => {
   const [entry, setEntry]: [
     {} | IntersectionObserverEntry,
     React.Dispatch<React.SetStateAction<any>>
