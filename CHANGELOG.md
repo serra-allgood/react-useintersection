@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### Bugs
+
+- Fixed entry point in package.json
+
 ## 1.0.0
 
 - Create base implementation
