@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+### Bugs
+
+- Fixed `window is not defined` error during Next.js build process
+
 ## 1.0.1
 
 ### Bugs
