@@ -2,25 +2,21 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import * as Types from './types'
 
-const useIntersection = (
-  { root = null, rootMargin, threshold = 0 }: Types.UseIntersectionArgs
-): Types.UseIntersectionReturn => {
-  const [entry, setEntry]: [
-    {} | IntersectionObserverEntry,
-    React.Dispatch<React.SetStateAction<any>>
-  ] = useState({})
-  const [node, setNode]: [
-    null | Element,
-    React.Dispatch<React.SetStateAction<any>>
-  ] = useState(null)
+const useIntersection = (options: Types.HookUseIntersectionArgs = {}): Types.HookUseIntersectionReturn => {
+  const [entry, setEntry]: [IntersectionObserverEntry, React.Dispatch<React.SetStateAction<any>>] = useState({} as IntersectionObserverEntry)
+  const [node, setNode]: [null | Element, React.Dispatch<React.SetStateAction<any>>] = useState(null)
   const observer: React.MutableRefObject<null | IntersectionObserver> = useRef(null)
+
+  if (!window.IntersectionObserver) {
+    require('intersection-observer')
+  }
 
   useEffect(() => {
     if (observer.current) observer.current.disconnect()
 
     observer.current = new IntersectionObserver(
       ([entry]) => setEntry(entry),
-      { root, rootMargin, threshold }
+      { root: options.root, rootMargin: options.rootMargin, threshold: options.threshold }
     )
 
     const { current: currentObserver } = observer
@@ -28,7 +24,7 @@ const useIntersection = (
     if (node) currentObserver.observe(node)
 
     return () => currentObserver.disconnect()
-  }, [node, root, rootMargin, threshold])
+  }, [node, options.root, options.rootMargin, options.threshold])
 
   return [setNode, entry]
 }
