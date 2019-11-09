@@ -1,6 +1,6 @@
 {
   "name": "react-useintersection",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom React Hook for initializing IntersectionObserver on any node ref",
   "main": "lib/index.js",
   "scripts": {
