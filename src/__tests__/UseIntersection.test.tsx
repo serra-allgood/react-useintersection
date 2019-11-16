@@ -1,24 +1,26 @@
 import React, { PropsWithChildren, useEffect, useRef } from 'react'
 import ReactTestUtils from 'react-dom/test-utils'
 import { mount } from 'enzyme'
-require('intersection-observer')
+// require('intersection-observer')
 
 import useIntersection from '../'
 
 describe('useIntersection', () => {
-  const windowIntersectionObserver = window.IntersectionObserver
+  const windowIntersectionObserver = globalThis.IntersectionObserver
   let mockCallback: Function
 
   beforeAll(() => {
-    (window.IntersectionObserver as any) = function (this: IntersectionObserver, callback: Function) {
+    (globalThis.IntersectionObserver as any) = function (this: IntersectionObserver, callback: Function) {
       mockCallback = callback
       this.observe = () => {}
       this.disconnect = () => {}
     }
+
+    debugger
   })
 
   afterAll(() => {
-    window.IntersectionObserver = windowIntersectionObserver
+    globalThis.IntersectionObserver = windowIntersectionObserver
   })
 
   test('entry passing', () => {
@@ -42,7 +44,6 @@ describe('useIntersection', () => {
     }
     const mockEntry = { intersectionRatio: 0.5, isIntersecting: true } as IntersectionObserverEntry
     const wrapper = mount(<ParentComponent />)
-
     expect(wrapper.find('#test-node').text()).toBe('')
 
     ReactTestUtils.act(() => {

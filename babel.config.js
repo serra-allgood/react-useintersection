@@ -5,6 +5,7 @@ module.exports = {
       {
         targets: {
           node: 'current',
+          browsers: '> 0.25%, not dead'
         },
       },
     ],

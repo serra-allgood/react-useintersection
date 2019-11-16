@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0
+
+- Use `globalThis` to gain cross-environment support
+- Provide polyfill for `IntersectionObserver` if it isn't defined
+
+### Misc
+
+- Updated dependencies to resolve security issue
+
 ## 1.0.2
 
 ### Bugs
