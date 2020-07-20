@@ -11,10 +11,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.allgood.dev/jump_spider/react-useintersection"
+    "url": "https://github.com/serra-allgood/react-useintersection"
   },
   "keywords": [
-    "React",
     "React",
     "Hook",
     "IntersectionObserver"
