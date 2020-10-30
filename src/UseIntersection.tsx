@@ -19,8 +19,6 @@ const useIntersection = (options: Types.HookUseIntersectionArgs = {}): Types.Hoo
       { root: options.root, rootMargin: options.rootMargin, threshold: options.threshold }
     )
 
-    debugger
-
     const { current: currentObserver } = observer
 
     if (node) currentObserver.observe(node)
