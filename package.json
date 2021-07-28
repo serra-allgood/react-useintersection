@@ -55,7 +55,6 @@
     "jest": "^24.9.0",
     "react": "^16.11.0",
     "react-dom": "^16.12.0",
-    "standardjs": "^1.0.0-alpha",
     "standardx": "^5.0.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.4"
